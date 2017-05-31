@@ -10,8 +10,11 @@ import UIKit
 import CoreLocation
 
 
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController, UITextFieldDelegate,CLLocationManagerDelegate {
     
+    //MARK: Properties:
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     
     let locationManger = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Estimotes")
@@ -21,9 +24,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         47861: UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
     ]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        nameTextField.delegate = self
+        
         locationManger.delegate = self
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
             locationManger.requestWhenInUseAuthorization()
@@ -45,7 +52,22 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
     
-     
+    //MARK: UItextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Hide the keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        nameLabel.text = textField.text
+    }
+    
+    //MARK: Actions
+    @IBAction func sendMessage(_ sender: UIButton) {
+        nameLabel.text = "Send hitted"
+    }
+
 
 }
 
