@@ -21,29 +21,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="onX-wo-rdz">
-                                <rect key="frame" x="56" y="285" width="146.5" height="80.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" verticalHuggingPriority="256" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="onX-wo-rdz">
+                                <rect key="frame" x="16" y="45" width="320" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Love Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Km-U4-56Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Love Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-Nv-yiG">
-                                        <rect key="frame" x="0.0" y="20.5" width="146.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="220" height="30"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-g7-Kju">
-                                        <rect key="frame" x="0.0" y="50.5" width="40" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="64" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Send "/>
                                         <connections>
                                             <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LhH-z4-YjS"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="160" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="yXs-mN-Wum">
+                                        <rect key="frame" x="0.0" y="102" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="320" id="AMx-pv-v2B"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bFo-2X-fJ6" appends="YES" id="BVQ-1g-043"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -52,10 +63,20 @@
                     <connections>
                         <outlet property="nameLabel" destination="1Km-U4-56Z" id="bfX-YP-1m9"/>
                         <outlet property="nameTextField" destination="SDZ-Nv-yiG" id="Jkf-rY-jcK"/>
+                        <outlet property="photoImageView" destination="yXs-mN-Wum" id="h5E-Ss-vV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bFo-2X-fJ6">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="hfe-7s-zWE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-76" y="128.18590704647679"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="493" height="495"/>
+    </resources>
 </document>
