@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160047E91EE1F45800A7BE8D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160047E81EE1F45800A7BE8D /* RatingControl.swift */; };
 		167496AC1ED60B44000473CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167496AB1ED60B44000473CA /* AppDelegate.swift */; };
 		167496AE1ED60B44000473CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167496AD1ED60B44000473CA /* ViewController.swift */; };
 		167496B11ED60B44000473CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167496AF1ED60B44000473CA /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160047E81EE1F45800A7BE8D /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		167496A81ED60B44000473CA /* Iris 📨.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iris 📨.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		167496AB1ED60B44000473CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167496AD1ED60B44000473CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				167496AB1ED60B44000473CA /* AppDelegate.swift */,
 				167496AD1ED60B44000473CA /* ViewController.swift */,
+				160047E81EE1F45800A7BE8D /* RatingControl.swift */,
 				167496AF1ED60B44000473CA /* Main.storyboard */,
 				167496B21ED60B44000473CA /* Assets.xcassets */,
 				167496B41ED60B44000473CA /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167496AE1ED60B44000473CA /* ViewController.swift in Sources */,
+				160047E91EE1F45800A7BE8D /* RatingControl.swift in Sources */,
 				167496AC1ED60B44000473CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
