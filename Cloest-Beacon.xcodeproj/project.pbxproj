@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		160047E91EE1F45800A7BE8D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160047E81EE1F45800A7BE8D /* RatingControl.swift */; };
+		160047ED1EE214C500A7BE8D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160047EC1EE214C500A7BE8D /* Message.swift */; };
 		167496AC1ED60B44000473CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167496AB1ED60B44000473CA /* AppDelegate.swift */; };
 		167496AE1ED60B44000473CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167496AD1ED60B44000473CA /* ViewController.swift */; };
 		167496B11ED60B44000473CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167496AF1ED60B44000473CA /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		160047E81EE1F45800A7BE8D /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		160047EC1EE214C500A7BE8D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../Message.swift; sourceTree = "<group>"; };
 		167496A81ED60B44000473CA /* Iris 📨.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iris 📨.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		167496AB1ED60B44000473CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167496AD1ED60B44000473CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				167496AB1ED60B44000473CA /* AppDelegate.swift */,
 				167496AD1ED60B44000473CA /* ViewController.swift */,
 				160047E81EE1F45800A7BE8D /* RatingControl.swift */,
+				160047EC1EE214C500A7BE8D /* Message.swift */,
 				167496AF1ED60B44000473CA /* Main.storyboard */,
 				167496B21ED60B44000473CA /* Assets.xcassets */,
 				167496B41ED60B44000473CA /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167496AE1ED60B44000473CA /* ViewController.swift in Sources */,
+				160047ED1EE214C500A7BE8D /* Message.swift in Sources */,
 				160047E91EE1F45800A7BE8D /* RatingControl.swift in Sources */,
 				167496AC1ED60B44000473CA /* AppDelegate.swift in Sources */,
 			);
@@ -453,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.boran.Cloest-BeaconTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloest-Beacon.app/Cloest-Beacon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iris 📨.app/Iris 📨";
 			};
 			name = Debug;
 		};
@@ -467,7 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.boran.Cloest-BeaconTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloest-Beacon.app/Cloest-Beacon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iris 📨.app/Iris 📨";
 			};
 			name = Release;
 		};
