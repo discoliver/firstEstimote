@@ -27,9 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         47861: UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
     ]
     let messageText = [
-        31059: "紫色区域：喜欢你：从早晨的阳光和晚上的好梦",
-        38948: "蓝色区域：想念你：是一杯一盏一茶一饭",
-        47861: "绿色区域：留恋你：始于眉间色彩终于你的眼神"
+        31059: "That I first saw your lovely face, Now I see it every day.                                           🌕🌖🌗🌘🌑🌒🌓🌔                   Good Morning and Evening. ",
+        38948: "That I am, I am, I am, the luckiest.   😍😘😜 Eat well ! ",
+        47861: "And in a wide sea of eyes,🌹                    I see one pair that I recognize.                Happy Makeup!💅"
     ]
     
     
