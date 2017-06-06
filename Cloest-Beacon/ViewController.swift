@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var messageLabel: UILabel!
     
     let locationManger = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Estimotes")
@@ -24,6 +25,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         31059: UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
         38948: UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
         47861: UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
+    ]
+    let messageText = [
+        31059: "紫色区域：喜欢你：从早晨的阳光和晚上的好梦",
+        38948: "蓝色区域：想念你：是一杯一盏一茶一饭",
+        47861: "绿色区域：留恋你：始于眉间色彩终于你的眼神"
     ]
     
     
@@ -50,6 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         if(knownBeacons.count > 0) {
             let cloestBeacon = knownBeacons[0] as CLBeacon
             self.view.backgroundColor = self.colors[cloestBeacon.minor.intValue]
+            self.messageLabel.text = self.messageText[cloestBeacon.minor.intValue]
             print("hello")
         }
     }
@@ -84,10 +91,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
     
     
     //MARK: Actions

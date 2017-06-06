@@ -24,7 +24,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var starCount: Int = 5 {
+    @IBInspectable var starCount: Int = 8 {
         didSet {
             setupButtons()
         }
